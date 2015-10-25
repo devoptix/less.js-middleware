@@ -1,11 +1,11 @@
 This middleware was created to allow processing of [Less](http://lesscss.org) files for [Connect JS](http://www.senchalabs.org/connect/) framework and by extension the [Express JS](http://expressjs.com/) framework.
 
-[![Build Status](https://drone.io/github.com/emberfeather/less.js-middleware/status.png)](https://drone.io/github.com/emberfeather/less.js-middleware/latest)
+*This package was forked from [emberfeather/less.js-middleware](https://github.com/emberfeather/less.js-middleware) to use Less v2.5.x.*
 
 ## Installation
 
 ```sh
-npm install less-middleware --save
+npm install less-mw --save
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ lessMiddleware(source, [{options}])
 ### Express
 
 ```js
-var lessMiddleware = require('less-middleware');
+var lessMiddleware = require('less-mw');
 
 var app = express();
 app.use(lessMiddleware(__dirname + '/public'));
@@ -147,11 +147,11 @@ Common examples of using the Less middleware are available in the [wiki](https:/
 
 ### My less never recompiles, even when I use `{force: true}`!
 
-Make sure you're declaring less-middleware before your static middleware, if you're using the same directory, e.g. (with express):
+Make sure you're declaring less-mw before your static middleware, if you're using the same directory, e.g. (with express):
 
 
 ```js
-var lessMiddleware = require('less-middleware');
+var lessMiddleware = require('less-mw');
 
 var app = express();
 app.use(lessMiddleware(__dirname + '/public'));
@@ -161,7 +161,7 @@ app.use(express.static(__dirname + '/public'));
 not
 
 ```js
-var lessMiddleware = require('less-middleware');
+var lessMiddleware = require('less-mw');
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
